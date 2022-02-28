@@ -33,7 +33,7 @@
     "build": "snowpack build",
     <% } %>
 
-    "build:declaration": "tsc --declaration —-declarationDir dist --emitDeclarationOnly src/index.ts",
+    "build:declaration": "tsc --declaration --declarationDir dist --emitDeclarationOnly src/index.ts",
     "docs": "typedoc --out docs src/index.ts",
     "test": "jest",
     "test:watch": "jest --watch"
