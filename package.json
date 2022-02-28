@@ -1,16 +1,17 @@
 {
   "name": "taiki-cli",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "description": "️TypeScript development infrastructure generator.",
   "scripts": {
     "lint": "eslint '*/**/*.{js,ts,tsx}'",
     "build": "ts-node scripts/build.ts",
     "test": "jest --coverage",
     "_init": "node dist/src/chore.js cli-test",
-    "husky": "husky install"
+    "husky": "husky install",
+    "prepublish": "npm version patch"
   },
   "bin": {
-    "taiki-cli": "src/index.js"
+    "taiki-cli": "dist/src/index.js"
   },
   "repository": {
     "type": "git",

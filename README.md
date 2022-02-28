@@ -45,4 +45,9 @@ taiki-cli <path-to-project>
 ## ✅ Todo
 
 - [ ] TS+React
+- [ ] TS+React+Redux
+- [ ] TS+React+Hooks
+- [ ] TS+NodeJS
+- [ ] TS+Electron+React
+- [ ] ...
 
