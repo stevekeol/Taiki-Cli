@@ -10,7 +10,7 @@
     "husky": "husky install"
   },
   "bin": {
-    "chore": "src/chore.js"
+    "taiki-cli": "src/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
   },
   "keywords": [
     "cli",
-    "chore"
+    "taiki"
   ],
   "author": "stevekeol <stevekeol.x@gmail.com>",
   "license": "MIT",
