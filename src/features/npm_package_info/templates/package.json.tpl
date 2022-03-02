@@ -14,6 +14,11 @@
     "build": "ts-node scripts/build.ts",
     <% } %>
 
+    <% if (useVite) { %>
+    "build": "vite build",
+    "dev": "vite",
+    <% } %>
+
     <% if (useTypeScriptCompiler) { %>
     "start": "tsc --watch",
     "build": "tsc",

@@ -49,6 +49,7 @@ export const setup: FeatureSetup = async context => {
   await rederTemplate(
     resolve(rootPath, 'package.json'),
     resolve(__dirname, './templates/package.json.tpl'),
+    //@TODO 更改package.json配置
     {
       packageName,
       author,
@@ -58,6 +59,7 @@ export const setup: FeatureSetup = async context => {
       useWebpack: buildTool === BUILD_TOOLS.WEBPACK,
       useRoolup: buildTool === BUILD_TOOLS.ROLLUP,
       useEsbuild: buildTool === BUILD_TOOLS.ESBUILD,
+      useVite: buildTool === BUILD_TOOLS.VITE,
       useSnowpack: buildTool === BUILD_TOOLS.SNOWPACK,
       hasGitFolder,
       __prettier_parser: 'json-stringify'

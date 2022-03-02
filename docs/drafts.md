@@ -7,3 +7,13 @@
 - TS
 - TS + React
 - TS + Electron + React
+
+默认有的工程文件：
+ESlint、Prettier、Typedoc、Jest、
+
+> 疑问：这里的esbuild可以编译TS装饰器么？
+
+
+
+## TODO
+- [ ] Vite

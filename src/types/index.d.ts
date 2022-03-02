@@ -21,6 +21,7 @@ interface FeatureData {
 export interface QuestionAnswers extends Answers {
   readonly buildTool?: BUILD_TOOLS
   readonly isReactNeeded?: boolean
+  // @TODO
 }
 
 export interface FeatureContext {

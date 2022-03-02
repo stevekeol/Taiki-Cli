@@ -1,4 +1,4 @@
-import { ensureFile, writeFile } from 'fs-extra'
+import { ensureFile, writeFile, copy } from 'fs-extra'
 import { renderFile } from 'ejs'
 import type { Data } from 'ejs'
 import { formatter } from '../utils/formatter'
@@ -12,4 +12,9 @@ export const rederTemplate = async (path: string, templatePath: string, data?: D
   }
 
   await writeFile(path, content)
+}
+
+
+export const copyTemplate = async (path: string, templatePath: string) => {
+  await copy(path, templatePath)
 }

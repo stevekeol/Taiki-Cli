@@ -11,6 +11,7 @@ import * as babelFeature from './babel'
 import * as prettierFeature from './prettier'
 import * as eslintFeature from './eslint'
 import * as esbuildFeature from './esbuild'
+import * as viteFeature from './vite'
 import * as snowpackFeature from './snowpack'
 import * as webpackFeature from './webpack'
 import * as rollupFeature from './rollup'
@@ -30,12 +31,13 @@ const featureCollection: FeatureModule[] = [
   prettierFeature,
   eslintFeature,
   esbuildFeature,
+  viteFeature,
   snowpackFeature,
   webpackFeature,
   rollupFeature,
   jestFeature,
   boilerplateFeature,
-  githubActionFeature
+  githubActionFeature,
 ]
 
 const askModuleQuestion = async (featureModule: FeatureModule, context: FeatureContext) => {

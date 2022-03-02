@@ -1,6 +1,7 @@
 export enum BUILD_TOOLS {
   TSC,
   ESBUILD,
+  VITE,
   SNOWPACK,
   WEBPACK,
   ROLLUP
@@ -10,6 +11,7 @@ export enum BUILD_TOOLS {
 const LabelMappings = [
   'None(Just use the TypeScript compiler)',
   'esbuild',
+  'vite',
   'Snowpack',
   'webpack',
   'Rollup'
