@@ -5,7 +5,7 @@ import { DependencyType, getDepsCollection, clearDeps } from '../../../core/depe
 import { BUILD_TOOLS } from '../../typescript/build-tools'
 
 const rootPath = path.resolve(__dirname, 'tmp')
-describe('As chore vite feature', () => {
+describe('As taiki vite feature', () => {
   beforeEach(async () => {
     clearDeps()
     await fs.ensureDir(rootPath)
@@ -30,8 +30,8 @@ describe('As chore vite feature', () => {
     const skipped1 = await isSkip({ rootPath, answers: { buildTool: BUILD_TOOLS.ESBUILD } })
     expect(skipped1).toBe(true)
 
-    const skipped1 = await isSkip({ rootPath, answers: { buildTool: BUILD_TOOLS.ROLLUP } })
-    expect(skipped1).toBe(true)    
+    const skipped4 = await isSkip({ rootPath, answers: { buildTool: BUILD_TOOLS.ROLLUP } })
+    expect(skipped4).toBe(true)    
 
     const skipped2 = await isSkip({ rootPath, answers: { buildTool: BUILD_TOOLS.VITE } })
     expect(skipped2).toBe(false)
@@ -47,7 +47,7 @@ describe('As chore vite feature', () => {
     const deps = getDepsCollection()
     const expectedDependencies = [
       'vite',
-      '@vite/plugin-react'
+      '@vitejs/plugin-react'
     ].map(item => ({ name: item, type: DependencyType.DEV }))
 
     expect(deps).toStrictEqual(expectedDependencies)

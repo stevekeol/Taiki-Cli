@@ -4,7 +4,7 @@ import { isSkip, setup } from '../index'
 import { DependencyType, getDepsCollection, clearDeps } from '../../../core/dependency'
 
 const rootPath = path.resolve(__dirname, 'tmp')
-describe('As chore eslint feature', () => {
+describe('As taiki eslint feature', () => {
   beforeEach(async () => {
     clearDeps()
     await fs.ensureDir(rootPath)

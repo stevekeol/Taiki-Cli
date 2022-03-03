@@ -19,6 +19,7 @@ import * as jestFeature from './jest'
 import * as boilerplateFeature from './boilerplate'
 import * as githubActionFeature from './github_action'
 import * as depsInstallFeature from './deps_install'
+// import * as electronFeature from './electron'
 
 const featureCollection: FeatureModule[] = [
   typescriptFeature,
@@ -32,6 +33,7 @@ const featureCollection: FeatureModule[] = [
   eslintFeature,
   esbuildFeature,
   viteFeature,
+  // electronFeature,
   snowpackFeature,
   webpackFeature,
   rollupFeature,

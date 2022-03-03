@@ -4,7 +4,7 @@ import { isSkip, setup } from '../index'
 import { DependencyType, getDepsCollection, clearDeps } from '../../../core/dependency'
 
 const rootPath = path.resolve(__dirname, 'tmp')
-describe('As chore typescript feature', () => {
+describe('As taiki typescript feature', () => {
   beforeEach(async () => {
     clearDeps()
     await fs.ensureDir(rootPath)

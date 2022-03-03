@@ -3,7 +3,7 @@ import fs from 'fs-extra'
 import { questionBuilder, isSkip } from '../index'
 
 const rootPath = path.resolve(__dirname, 'tmp')
-describe('As chore package info feature', () => {
+describe('As taiki package info feature', () => {
   beforeEach(async () => {
     await fs.ensureDir(rootPath)
   })

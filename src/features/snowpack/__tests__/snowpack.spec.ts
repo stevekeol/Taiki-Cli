@@ -5,7 +5,7 @@ import { DependencyType, getDepsCollection, clearDeps } from '../../../core/depe
 import { BUILD_TOOLS } from '../../typescript/build-tools'
 
 const rootPath = path.resolve(__dirname, 'tmp')
-describe('As chore snowpack feature', () => {
+describe('As taiki snowpack feature', () => {
   beforeEach(async () => {
     clearDeps()
     await fs.ensureDir(rootPath)
