@@ -33,7 +33,7 @@ export const setup: FeatureSetup = async context => {
   if (isBrowserListNeeded) {
     await rederTemplate(
       resolve(rootPath, '.browserslistrc'),
-      resolve(__dirname, 'templates', '.browserslistrc.tpl')
+      resolve(__dirname, 'templates', 'browserslistrc.tpl')
     )
   }
 }

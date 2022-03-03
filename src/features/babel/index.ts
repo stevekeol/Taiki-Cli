@@ -36,7 +36,7 @@ export const setup: FeatureSetup = async context => {
 
   await rederTemplate(
     resolve(rootPath, '.babelrc'),
-    resolve(__dirname, './templates/.babelrc.tpl'),
+    resolve(__dirname, './templates/babelrc.tpl'),
     {
       isReactNeeded,
       __prettier_parser: 'json-stringify'

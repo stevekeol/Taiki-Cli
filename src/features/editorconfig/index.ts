@@ -11,6 +11,6 @@ export const setup: FeatureSetup = async context => {
   const { rootPath } = context
   await rederTemplate(
     resolve(rootPath, '.editorconfig'),
-    resolve(__dirname, './templates/.editorconfig.tpl')
+    resolve(__dirname, './templates/editorconfig.tpl')
   )
 }

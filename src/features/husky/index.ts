@@ -29,6 +29,6 @@ export const setup: FeatureSetup = async context => {
 
   await rederTemplate(
     resolve(rootPath, '.husky', '.gitignore'),
-    resolve(__dirname, './templates/.gitignore.tpl')
+    resolve(__dirname, './templates/gitignore.tpl')
   )
 }

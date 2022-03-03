@@ -28,7 +28,7 @@ export const setup: FeatureSetup = async context => {
 
   await rederTemplate(
     resolve(rootPath, '.prettierrc'),
-    resolve(__dirname, './templates/.prettierrc.tpl'),
+    resolve(__dirname, './templates/prettierrc.tpl'),
     {
       isReactNeeded,
       __prettier_parser: 'json-stringify'

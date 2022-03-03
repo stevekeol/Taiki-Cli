@@ -29,7 +29,7 @@ export const setup: FeatureSetup = async context => {
 
   await rederTemplate(
     resolve(rootPath, '.eslintrc'),
-    resolve(__dirname, './templates/.eslintrc.tpl'),
+    resolve(__dirname, './templates/eslintrc.tpl'),
     {
       isReactNeeded,
       __prettier_parser: 'json-stringify'
