@@ -2,7 +2,6 @@ import path from 'path'
 import fs from 'fs-extra'
 
 export async function copy() {
-  console.log(' Copy Files ')
   const distPath = path.resolve(__dirname, '..', 'dist')
   const distFolderExists = await fs.pathExists(distPath)
 

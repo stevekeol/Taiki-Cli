@@ -16,5 +16,5 @@ export const rederTemplate = async (path: string, templatePath: string, data?: D
 
 
 export const copyTemplate = async (path: string, templatePath: string) => {
-  await copy(path, templatePath)
+  await copy(path, templatePath, { overwrite: true })
 }
