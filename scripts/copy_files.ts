@@ -20,7 +20,7 @@ export async function copyDist() {
     }
   }
 
-  for (const file of ['package.json', 'README.md']) {
+  for (const file of ['.prettierrc', 'package.json', 'README.md']) {
     await copy(resolve(__dirname, '..', file), resolve(distPath, file), { overwrite: true })
   }
 
