@@ -2,7 +2,7 @@ import path from 'path'
 import fs from 'fs-extra'
 import glob from 'glob'
 import { build as esbuild } from 'esbuild'
-import { copy } from './copy_files'
+import { copyDist } from './copy_files'
 
 function globToFiles(globStr: string) {
   return new Promise<string[]>((resolve, reject) => {
@@ -30,7 +30,7 @@ async function build() {
 }
 
 build()
-  .then(copy)
+  .then(copyDist)
   .catch((e: Error) => {
     console.error(e)
     process.exit(1)
