@@ -8,21 +8,21 @@ import { addDeps, addDevDeps } from '../../core/dependency'
 export const questionBuilder: QuestionBuilder = async () => {
   return buildConfirmQuestion(
     'isElectronNeeded',
-    '❓ Do you need to use Electron?',
+    '❓ Do you need to build desktop app with Electron?',
     false,
-    answer => answer.buildTool !== BUILD_TOOLS.TSC
+    answer => answer.isReactNeeded === true
   )
 }
 
 export const isSkip: IsSkipFeature = async context => {
-  return !context.answers.isReactNeeded
+  return !context.answers.isElectronNeeded
 }
 
 export const setup: FeatureSetup = async context => {
   const { rootPath, answers } = context
   
-  addDeps(['react', 'react-dom'])
-  addDevDeps(['@types/react', '@types/react-dom'])
+  addDeps(['electron-is-dev'])
+  addDevDeps(['electron', 'electron-builder'])
 
   await copyTemplate(
     resolve(__dirname, './templates'),

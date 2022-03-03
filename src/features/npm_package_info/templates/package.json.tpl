@@ -19,6 +19,18 @@
     "dev": "vite",
     <% } %>
 
+    <% if (useVite && useElectron) { %>
+    "build": "npm run build:vite && npm run build:electron",
+    "dev": "concurrently \"yarn dev:vite\" \"yarn dev:electron\"",
+    <% } %>   
+
+    <% if (useElectron) { %>
+    "dev:electron": "npm run build:electron && electron .",
+    "build:electron": "tsc -p electron",
+    "dist": "npm run build && electron-builder",
+    "pack": "npm run build && electron-builder --dir",
+    <% } %>    
+
     <% if (useTypeScriptCompiler) { %>
     "start": "tsc --watch",
     "build": "tsc",
@@ -41,7 +53,7 @@
     "build:declaration": "tsc --declaration --declarationDir dist --emitDeclarationOnly src/index.ts",
     "docs": "typedoc --out docs src/index.ts",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
   },
   <% if (hasGitFolder) { %>
   "commitlint": {

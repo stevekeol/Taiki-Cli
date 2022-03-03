@@ -40,7 +40,7 @@ export const isSkip: IsSkipFeature = async ({ rootPath }) => {
 
 export const setup: FeatureSetup = async context => {
   const { rootPath, answers } = context
-  const { packageName, author, repoUrl, license, buildTool } = answers
+  const { packageName, author, repoUrl, license, buildTool, isElectronNeeded } = answers
 
   const gitFolderPath = resolve(rootPath, '.git')
   const hasGitFolder =
@@ -61,6 +61,7 @@ export const setup: FeatureSetup = async context => {
       useEsbuild: buildTool === BUILD_TOOLS.ESBUILD,
       useVite: buildTool === BUILD_TOOLS.VITE,
       useSnowpack: buildTool === BUILD_TOOLS.SNOWPACK,
+      useElectron: isElectronNeeded,
       hasGitFolder,
       __prettier_parser: 'json-stringify'
     }

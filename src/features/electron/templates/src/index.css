@@ -1,13 +1,27 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* For AppBar */
+.draggable {
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.undraggable {
+    -webkit-app-region: no-drag;
+}
+
+body {
+  /*让应用可拖动*/
+  -webkit-app-region: drag;
+  /*让应用不全透明，部分透明就行*/
+  background: rgba(57, 82, 96, 0.5); 
+  background-color: green;
+}
+
+button {
+  /*修复在无窗口菜单栏且应用可拖动时，按钮不能点击的问题*/
+  -webkit-app-region: no-drag;
 }

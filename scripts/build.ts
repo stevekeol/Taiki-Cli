@@ -18,12 +18,14 @@ async function build() {
   await fs.remove(distPath)
 
   const entryPoints = await globToFiles('src/**/!(*.spec|*.test|*.d).ts')
+  // const entryPoints = await globToFiles('src/**/!(*.spec|*.test|*.d|(features/**/templates/*)).ts')
+  console.log('---', entryPoints)
   await esbuild({
     entryPoints,
-    platform: 'node',
+    platform: 'node', // @TODO
     minify: true,
     sourcemap: true,
-    format: 'cjs',
+    format: 'cjs', // @TODO
     tsconfig: 'tsconfig.json',
     outdir: 'dist/src'
   })
