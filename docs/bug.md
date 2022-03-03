@@ -8,4 +8,6 @@
 
 1. 上传到npm的包，为什么安装后，和本地直接node ./dist/src/index.js不一致（react逻辑中，上传到npm的dist中只有index.html，而没有src及其中的demo文件）
 
+npmignore中，`src/`而非`src`
+
 2. 

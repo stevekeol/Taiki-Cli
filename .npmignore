@@ -1,6 +1,6 @@
-coverage
-docs
-node_modules
-scripts
-src
-tests
+coverage/
+docs/
+node_modules/
+scripts/
+src/
+tests/
