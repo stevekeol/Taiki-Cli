@@ -17,9 +17,18 @@ async function build() {
   const distPath = path.resolve(__dirname, '..', 'dist')
   await fs.remove(distPath)
 
-  const entryPoints = await globToFiles('src/**/!(*.spec|*.test|*.d).ts')
-  // const entryPoints = await globToFiles('src/**/!(*.spec|*.test|*.d|(features/**/templates/*)).ts')
-  console.log('---', entryPoints)
+  const _entryPoints = await globToFiles('src/**/!(*.spec|*.test|*.d).ts')
+
+  // @TODO 此处采用了暴力手段排除templates中的所有ts文件
+  const filter = (_files: string[]) => {
+    let files: string[] = [];
+    _files.map(file => {
+      if (file.search(/templates/) == -1) { files.push(file) }
+    })
+    return files
+  }
+  const entryPoints = filter(_entryPoints)
+
   await esbuild({
     entryPoints,
     platform: 'node', // @TODO

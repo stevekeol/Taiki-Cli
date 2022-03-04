@@ -46,7 +46,7 @@ taiki-cli <path-to-project>
 
 - [x] TS+React
 - [x] TS+Electron+React
-- [ ] TS+NodeJS
+- [ ] TS+NodeJS(+Docker+MongoDB+Kafka+...)
 - [ ] TS+React+Redux
 - [ ] TS+React+Hooks
 - [ ] ...
