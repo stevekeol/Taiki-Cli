@@ -10,6 +10,7 @@ export const questionBuilder: QuestionBuilder = async () => {
     'isElectronNeeded',
     '❓ Do you need to build desktop app with Electron?',
     false,
+    // @TODO Electron的前置条件应该是react & vite
     answer => answer.isReactNeeded === true
   )
 }
@@ -22,7 +23,7 @@ export const setup: FeatureSetup = async context => {
   const { rootPath, answers } = context
   
   addDeps(['electron-is-dev'])
-  addDevDeps(['electron', 'electron-builder'])
+  addDevDeps(['electron', 'electron-builder', 'tailwindcss'])
 
   await copyTemplate(
     resolve(__dirname, './templates'),

@@ -11,3 +11,11 @@
 npmignore中，`src/`而非`src`
 
 2. 
+
+## TODO
+
+1. yes/no的选择貌似不符合直觉
+2. 生成项目的readme是统一版本
+3. package.json中增设dev/prod环境命令
+4. 项目创建后给与进入开发状态的提示
+5. react&electron，脚本混乱报错

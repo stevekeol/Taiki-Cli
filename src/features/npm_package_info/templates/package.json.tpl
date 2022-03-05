@@ -15,21 +15,23 @@
     <% } %>
 
     <% if (useVite) { %>
-    "build": "vite build",
-    "dev": "vite",
+    "build:vite": "vite build",
+    "dev:vite": "vite",
     <% } %>
 
-    <% if (useVite && useElectron) { %>
-    "build": "npm run build:vite && npm run build:electron",
-    "dev": "concurrently \"yarn dev:vite\" \"yarn dev:electron\"",
-    <% } %>   
-
+    <% if (useVite) { %>
     <% if (useElectron) { %>
-    "dev:electron": "npm run build:electron && electron .",
-    "build:electron": "tsc -p electron",
+    "build": "vite build && tsc -p electron",
+    "dev": "concurrently \"yarn dev:vite\" \"yarn dev:electron\"",
+    "dev:vite": "vite build && vite",
+    "dev:electron": "tsc -p electron && electron .",
     "dist": "npm run build && electron-builder",
     "pack": "npm run build && electron-builder --dir",
-    <% } %>    
+    <% } else { %>  
+    "build": "vite build",
+    "dev": "vite",      
+    <% { %>
+    <% } %> 
 
     <% if (useTypeScriptCompiler) { %>
     "start": "tsc --watch",
