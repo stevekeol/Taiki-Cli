@@ -30,7 +30,7 @@
     <% } else { %>  
     "build": "vite build",
     "dev": "vite",      
-    <% { %>
+    <% } %>
     <% } %> 
 
     <% if (useTypeScriptCompiler) { %>
