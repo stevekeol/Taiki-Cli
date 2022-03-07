@@ -1,6 +1,6 @@
 {
   "name": "taiki-cli",
-  "version": "0.1.20",
+  "version": "0.1.21",
   "description": "️TypeScript generator.",
   "scripts": {
     "lint": "eslint '*/**/*.{js,ts,tsx}'",
