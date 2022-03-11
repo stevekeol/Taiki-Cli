@@ -1,14 +1,18 @@
-# taiki-cli
+# **taiki-cli**
 
 taiki-cli 是构建 typescript 应用的超级助手。
 
-## 🚀 Usage
+## 🚀 使用
+
+直接创建项目（不安装）
 
 ```sh
 npx taiki-cli <path-to-project>
 ```
 
-You can also add `taiki-cli` as a global dependency.
+或者：
+
+1. 全局安装
 
 ```sh
 pnpm add taiki-cli -g
@@ -18,13 +22,14 @@ yarn global add taiki-cli
 npm install taiki-cli -g
 ```
 
-And run
+2. 创建项目
 
 ```sh
 taiki-cli <path-to-project>
 ```
 
 ## 🌱 ~ 🌳
+（待）
 
 
 ## ✨ Features
@@ -49,6 +54,7 @@ taiki-cli <path-to-project>
 
 - [x] TS+React
 - [x] TS+Electron+React
+- [ ] TS+NodeJS
 - [ ] TS+NodeJS(+Docker+MongoDB+Kafka+...)
 - [ ] TS+React+Redux
 - [ ] TS+React+Hooks
