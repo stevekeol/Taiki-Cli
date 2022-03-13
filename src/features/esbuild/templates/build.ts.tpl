@@ -17,6 +17,13 @@ async function build() {
   await fs.remove(distPath)
 
   const entryPoints = await globToFiles('src/**/!(*.spec|*.test|*.d).ts')
+
+  /**
+   * Memo:
+   * platform: 'node'/'browser'
+   * minify: 'true'/'false'
+   * format: 'cjs'/'esm'/...
+   */
   await esbuild({
     entryPoints,
     platform: 'node',
