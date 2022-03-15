@@ -8,7 +8,7 @@ import { main } from './core/main'
 
 program
   .name(takeFirst(Object.keys(bin)) as string)
-  .arguments('<project-path>')
+  .arguments('<project-path>  <subCommand>')
   .description(`🤖 ${colorizeText(description)}`)
   .version(version)
   .action(main)

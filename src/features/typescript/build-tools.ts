@@ -1,3 +1,5 @@
+import { colorizeTip } from '../../utils/colorizer'
+
 export enum BUILD_TOOLS {
   TSC,
   ESBUILD,
@@ -9,11 +11,11 @@ export enum BUILD_TOOLS {
 }
 
 const LabelMappings = [
-  'None(Just use the TypeScript compiler)',
-  'esbuild',
-  'vite',
+  `TSC`,
+  `Esbuild ${colorizeTip('(recommended)')}`,
+  `Vite`,
   'Snowpack',
-  'webpack',
+  'Webpack',
   'Rollup'
   // 'Parcel',
 ]
@@ -29,6 +31,6 @@ export const buildTools = () => {
     name: 'buildTool',
     message: '🛠  Which build tool do you want to use?',
     choices,
-    default: BUILD_TOOLS.TSC
+    default: BUILD_TOOLS.ESBUILD
   }
 }
