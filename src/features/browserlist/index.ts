@@ -17,7 +17,12 @@ export const questionBuilder: QuestionBuilder = async context => {
     return
   }
 
-  return buildConfirmQuestion('isBrowserListNeeded', '❓ Do you need to use BrowserList?', false)
+  return buildConfirmQuestion(
+    'isBrowserListNeeded', 
+    '❓ Do you need to use BrowserList?', 
+    false,
+    answer => answer.isReactNeeded === true //@TODO 此处没有认真思考
+  )
 }
 
 export const isSkip: IsSkipFeature = async context => {

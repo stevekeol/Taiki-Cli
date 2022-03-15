@@ -108,7 +108,7 @@ export const setup: FeatureSetup = async context => {
     },
     {
       start: '🧩 Installing dependencies',
-      success: '🎊 Dependencies installed successfully!',
+      success: '🧱 Dependencies installed successfully!',
       failed: '🚨 Dependencies installation failed!'
     }
   ).catch()

@@ -78,9 +78,9 @@ export const runTask = async (context: FeatureContext) => {
       }
     },
     {
-      start: '👷 Building infrastructure',
+      start: '🚧 Building infrastructure',
       success: '🏗  The development infrastructure generated.',
-      failed: `🚨 Failed to generate development environment infrastructure.`
+      failed: '🚨 Failed to generate development environment infrastructure.'
     }
   ).catch()
 

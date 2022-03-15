@@ -24,5 +24,5 @@ export async function copyDist() {
     await copy(resolve(__dirname, '..', file), resolve(distPath, file), { overwrite: true })
   }
 
-  console.log('😌 All files has been copied to dist folder')
+  console.log('🚚 All files has been copied to dist folder')
 }

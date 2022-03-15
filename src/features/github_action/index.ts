@@ -5,7 +5,12 @@ import { rederTemplate } from '../../core/template'
 import { PackageManager } from '../deps_install'
 
 export const questionBuilder: QuestionBuilder = async () => {
-  return buildConfirmQuestion('isGithubActionNeeded', '❓ Do you need to use Github Action?', false)
+  return buildConfirmQuestion(
+    'isGithubActionNeeded', 
+    '❓ Do you need to use Github Action?', 
+    false,
+    answer => answer.isReactNeeded === true //@TODO 此处没有认真思考
+  )
 }
 
 export const isSkip: IsSkipFeature = async context => {
