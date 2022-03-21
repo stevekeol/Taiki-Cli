@@ -78,7 +78,11 @@
   },
   "keywords": [
     "cli",
-    "chore"
+    "taiki",
+    "react",
+    "typescript",
+    "reactnative",
+    "electron"
   ],
   "author": "<%- author %>",
   "license": "<%= license %>",
